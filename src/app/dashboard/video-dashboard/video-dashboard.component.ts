@@ -9,12 +9,16 @@ import { Video } from '../../types';
 })
 export class VideoDashboardComponent implements OnInit {
   dashboardVideos: Video[] = videos;
+  currentVideo?: Video;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  selectVideo(video: Video) {
+    this.currentVideo = video;
+  }
 }
 
 const videos = [

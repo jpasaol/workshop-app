@@ -1,13 +1,9 @@
-<ul class="collection with-header">
-  <li class="collection-header"><h4>Video List</h4></li>
-  <ng-container *ngFor="let video of videoList">
-    <li
-      class="collection-item"
-      (click)="selectVideoItem(video)"
-      [class.highlighted]="selectedVideo?.id === video.id"
-    >
-      <div>Title: {{video.title}}</div>
-      <div>Author: {{video.author}}</div>
-    </li>
-  </ng-container>
-</ul>
+<div class="video-list-container">
+  <app-video-list-card
+    *ngFor="let video of videoList"
+    [video]="video"
+    (click)="selectVideoItem(video)"
+    [selected]="selectedVideo?.id === video.id"
+  >
+  </app-video-list-card>
+</div>
