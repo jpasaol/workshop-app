@@ -1,1 +1,47 @@
-<p>stat-filters works!</p>
+<div class="stat-filter-container">
+  <section class="card">
+    <div class="card-content">
+      <form
+        [formGroup]="filters"
+        (ngSubmit)="applyFilters()"
+        class="col s12"
+      >
+        <div class="row">
+          <div class="input-field">
+            <input
+              id="title_filter"
+              type="text"
+              class="validate"
+              formControlName="title"
+            >
+            <label
+              for="title_filter"
+              class="active"
+            >
+              Title
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field">
+            <input
+              id="author_filter"
+              type="text"
+              class="validate"
+              formControlName="author"
+            >
+            <label
+              for="author_filter"
+              class="active"
+            >
+              Author
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <button class="btn" [disabled]="!filters.valid">Apply filter</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</div>

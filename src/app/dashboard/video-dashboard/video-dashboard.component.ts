@@ -13,10 +13,10 @@ export class VideoDashboardComponent implements OnInit {
   dashboardVideos: Observable<Video[]> = of([]);
   currentVideo?: Video;
 
-  constructor(private _apiSvc: VideoDataService) { }
+  constructor(private _vds: VideoDataService) { }
 
   ngOnInit(): void {
-    this.dashboardVideos = this._apiSvc.loadVideos();
+    this.dashboardVideos = this._vds.loadVideos();
   }
 
   selectVideo(video: Video) {

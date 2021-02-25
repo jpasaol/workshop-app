@@ -1,5 +1,4 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
-import * as EventEmitter from 'events';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 import { Video } from '../../types';
 
